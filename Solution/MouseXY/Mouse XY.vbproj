@@ -6,12 +6,13 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BBCC1E46-487D-42A4-A061-7C9C79D0AAFF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>MouseXY.My.MyApplication</StartupObject>
-    <RootNamespace>MouseXY</RootNamespace>
-    <AssemblyName>MouseXY</AssemblyName>
+    <StartupObject>My.MyApplication</StartupObject>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>Mouse XY</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -36,7 +37,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>MouseXY.xml</DocumentationFile>
+    <DocumentationFile>Mouse XY.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
@@ -47,7 +48,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>MouseXY.xml</DocumentationFile>
+    <DocumentationFile>Mouse XY.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <UseVSHostingProcess>true</UseVSHostingProcess>
     <Prefer32Bit>false</Prefer32Bit>
@@ -105,6 +106,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.vb" />
     <Compile Include="Form.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +118,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>

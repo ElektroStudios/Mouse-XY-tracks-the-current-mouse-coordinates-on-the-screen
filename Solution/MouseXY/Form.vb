@@ -1,6 +1,10 @@
-﻿Public Class Main
+﻿Imports DevCase.Core.Application.Forms
 
-#Region " Vars "
+Public Class Main
+
+#Region " Fields "
+
+    Private magnetizer As WindowMagnetizer
 
     Public MoveForm As Boolean
     Public MoveForm_Mouse_Position As Point
@@ -11,29 +15,30 @@
 #Region "Label coordinates"
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        label_X_coordenates.Text = "X: " & MousePosition.X
-        label_Y_coordenates.Text = "Y: " & MousePosition.Y
+        Dim pt As Point = Control.MousePosition
+        Me.label_X_coordenates.Text = $"X: {pt.X}"
+        Me.label_Y_coordenates.Text = $"Y: {pt.Y}"
     End Sub
 
 #End Region
 
 #Region "STOP / EXIT buttons"
 
-    Private Sub button_exit_Click(sender As Object, e As EventArgs) Handles button_exit.Click
+    Private Sub Button_exit_Click(sender As Object, e As EventArgs) Handles button_exit.Click
         Me.Close()
     End Sub
 
-    Private Sub button_stop_Click(sender As Object, e As EventArgs) Handles button_stop.Click
-        If Timer1.Enabled = False Then
-            Timer1.Enabled = True
-            Me.button_stop.BackgroundImage = Global.MouseXY.My.Resources.Resources.stop1
-            label_stop.Text = "STOP"
-            label_stop.Location = New Point(15, 142)
+    Private Sub Button_stop_Click(sender As Object, e As EventArgs) Handles button_stop.Click
+        If Me.Timer1.Enabled = False Then
+            Me.Timer1.Enabled = True
+            Me.button_stop.BackgroundImage = Global.My.Resources.Resources.stop1
+            Me.label_stop.Text = "PAUSE"
+            Me.label_stop.Location = New Point(Me.label_stop.Location.X * 2, Me.label_stop.Location.Y)
         Else
-            Timer1.Enabled = False
-            Me.button_stop.BackgroundImage = Global.MouseXY.My.Resources.Resources.stop2
-            label_stop.Text = "RESUME"
-            label_stop.Location = New Point(7.5, 142)
+            Me.Timer1.Enabled = False
+            Me.button_stop.BackgroundImage = Global.My.Resources.Resources.stop2
+            Me.label_stop.Text = "RESUME"
+            Me.label_stop.Location = New Point(Me.label_stop.Location.X / 2, Me.label_stop.Location.Y)
         End If
     End Sub
 
@@ -43,17 +48,17 @@
 
     Private Sub Button_minimize_Click(sender As Object, e As EventArgs) Handles Button_minimize.Click
         Me.Hide()
-        NotifyIcon1.Visible = True
-        NotifyIcon1.ShowBalloonTip(2000, "Mouse XY", "Click to restore window", ToolTipIcon.Info)
+        Me.NotifyIcon1.Visible = True
+        Me.NotifyIcon1.ShowBalloonTip(1500, "MouXY", "Click to restore window", ToolTipIcon.None)
     End Sub
 
     Public Sub NotifyIcon1_Click(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.Click
         If Me.Visible = True Then
             Me.Hide()
-            NotifyIcon1.Visible = True
+            Me.NotifyIcon1.Visible = True
         Else
             Me.Show()
-            NotifyIcon1.Visible = False
+            Me.NotifyIcon1.Visible = False
         End If
     End Sub
 
@@ -61,58 +66,58 @@
 
 #Region " Move form "
 
-    Public Sub MoveForm_MouseDown(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles _
-        Me.MouseDown, _
-        picturebox_girl.MouseDown, _
-        picturebox_logo.MouseDown, _
-        picturebox_X.MouseDown, _
-        picturebox_Y.MouseDown, _
-        label_copytoclipboard.MouseDown, _
-        label_X_coordenates.MouseDown, _
-        label_Y_coordenates.MouseDown, _
-        label_exit.MouseDown, _
+    Public Sub MoveForm_MouseDown(sender As Object, e As MouseEventArgs) Handles _
+        Me.MouseDown,
+        picturebox_girl.MouseDown,
+        picturebox_logo.MouseDown,
+        picturebox_X.MouseDown,
+        picturebox_Y.MouseDown,
+        label_copytoclipboard.MouseDown,
+        label_X_coordenates.MouseDown,
+        label_Y_coordenates.MouseDown,
+        label_exit.MouseDown,
         label_stop.MouseDown
 
         If e.Button = Windows.Forms.MouseButtons.Left Then
-            MoveForm = True
-            MoveForm_Mouse_Position = e.Location
+            Me.MoveForm = True
+            Me.MoveForm_Mouse_Position = e.Location
         End If
 
     End Sub
 
-    Public Sub MoveForm_MouseMove(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles _
-        Me.MouseMove, _
-        picturebox_girl.MouseMove, _
-        picturebox_logo.MouseMove, _
-        picturebox_X.MouseMove, _
-        picturebox_Y.MouseMove, _
-        label_copytoclipboard.MouseMove, _
-        label_X_coordenates.MouseMove, _
-        label_Y_coordenates.MouseMove, _
-        label_exit.MouseMove, _
+    Public Sub MoveForm_MouseMove(sender As Object, e As MouseEventArgs) Handles _
+        Me.MouseMove,
+        picturebox_girl.MouseMove,
+        picturebox_logo.MouseMove,
+        picturebox_X.MouseMove,
+        picturebox_Y.MouseMove,
+        label_copytoclipboard.MouseMove,
+        label_X_coordenates.MouseMove,
+        label_Y_coordenates.MouseMove,
+        label_exit.MouseMove,
         label_stop.MouseMove
 
-        If MoveForm Then
-            MoveForm_Temporal_Point = Me.Location + e.Location - MoveForm_Mouse_Position
-            Me.Location = MoveForm_Temporal_Point
+        If Me.MoveForm Then
+            Me.MoveForm_Temporal_Point = Me.Location + e.Location - Me.MoveForm_Mouse_Position
+            Me.Location = Me.MoveForm_Temporal_Point
         End If
 
     End Sub
 
-    Public Sub MoveForm_MouseUp(sender As System.Object, e As System.Windows.Forms.MouseEventArgs) Handles _
-        Me.MouseUp, _
-        picturebox_girl.MouseUp, _
-        picturebox_logo.MouseUp, _
-        picturebox_X.MouseUp, _
-        picturebox_Y.MouseUp, _
-        label_copytoclipboard.MouseUp, _
-        label_X_coordenates.MouseUp, _
-        label_Y_coordenates.MouseUp, _
-        label_exit.MouseUp, _
+    Public Sub MoveForm_MouseUp(sender As Object, e As MouseEventArgs) Handles _
+        Me.MouseUp,
+        picturebox_girl.MouseUp,
+        picturebox_logo.MouseUp,
+        picturebox_X.MouseUp,
+        picturebox_Y.MouseUp,
+        label_copytoclipboard.MouseUp,
+        label_X_coordenates.MouseUp,
+        label_Y_coordenates.MouseUp,
+        label_exit.MouseUp,
         label_stop.MouseUp
 
         If e.Button = Windows.Forms.MouseButtons.Left Then
-            MoveForm = False
+            Me.MoveForm = False
         End If
 
     End Sub
@@ -124,11 +129,11 @@
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button_ontop.Click
         If Me.TopMost = True Then
             Me.TopMost = False
-            Me.Button_ontop.Image = Global.MouseXY.My.Resources.Resources.right_up
-            Me.ToolTip1.SetToolTip(Button_ontop, "Set window on top")
+            Me.Button_ontop.Image = Global.My.Resources.Resources.right_up
+            Me.ToolTip1.SetToolTip(Me.Button_ontop, "Set window topmost")
         Else
-            Me.Button_ontop.Image = Global.MouseXY.My.Resources.Resources.right_up_pressed
-            Me.ToolTip1.SetToolTip(Button_ontop, "Set window on background")
+            Me.Button_ontop.Image = Global.My.Resources.Resources.right_up_pressed
+            Me.ToolTip1.SetToolTip(Me.Button_ontop, "Restore window topmost")
             Me.TopMost = True
         End If
     End Sub
@@ -137,12 +142,22 @@
 
 #Region " Copy to clipboard "
 
-    Sub Form1_KeyPress(ByVal sender As Object, ByVal e As KeyPressEventArgs) Handles Me.KeyPress
+    Sub Form1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         If e.KeyChar = ChrW(3) Then
-            Clipboard.SetDataObject("X:" & MousePosition.X & "  " & "Y:" & MousePosition.Y)
-            Me.ToolTip1.Hide(Label_Clipboard)
-            Me.ToolTip1.Show("Copied to clipboard > X:" & MousePosition.X & " " & "Y:" & MousePosition.Y, Label_Clipboard, 2000)
+            Dim pt As Point = Control.MousePosition
+            Clipboard.SetDataObject(pt.ToString())
+            Me.ToolTip1.Hide(Me.Label_Clipboard)
+            Me.ToolTip1.Show($"Copied to clipboard: {pt}", Me.Label_Clipboard, 2000)
         End If
+    End Sub
+
+    Private Sub Main_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        Me.magnetizer = New WindowMagnetizer(Me) With
+        {
+            .Enabled = True,
+            .AllowOffscreen = False,
+            .Threshold = 20
+        }
     End Sub
 
 #End Region

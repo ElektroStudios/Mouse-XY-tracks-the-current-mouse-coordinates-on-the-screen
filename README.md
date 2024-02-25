@@ -1,32 +1,71 @@
-# Mouse XY
+<!-- Common Project Tags:
+desktop-app 
+desktop-application 
+dotnet 
+netframework 
+tool 
+tools 
+vbnet 
+visualstudio 
+windows 
+windows-app 
+windows-application 
+windows-applications 
+windows-forms 
+winforms 
+ -->
 
-**Mouse XY** is a simple program to track the current mouse coordinates on the screen.
+# MOUSE XY
 
-( This was my very first program developed in VB.NET on the year 2012; no updates were made to the source-code. )
+### A simple program to track the current mouse coordinates on the screen.
 
-# Screenshots
+------------------
 
-![](Preview/MouseXY_01.png)
+## 👋 Introduction
 
-# **Donations**
+This was my very first program developed in VB.NET on the year 2012. Probably I will not do serious modifications to the source-code or update it using good habbits.
 
-##### Through Paypal:
-If you like my work and want to support it, then please consider to deposit a donation through **Paypal** by clicking on the next button:
+## 🖼️ Screenshots
 
-[![Donation Account](Images/Paypal.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E4RQEV6YF5NZY)
+![screenshot](Images/MouseXY_01.png)
 
-[![Donation Amount](https://img.shields.io/badge/Current%20donations-0%24-red.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E4RQEV6YF5NZY)
+## 📝 Requirements
 
-You are free to specify whatever amount of money you wish. That money will be sent to my **Paypal** account.
+- Microsoft Windows OS.
 
-##### Through Envato:
-If you are a .NET programmer, then maybe you would like to consider the purchase of 
-'**DevCase for .NET Framework**', a powerful set of APIs for .NET developers, created by me. 
+## 🤖 Getting Started
 
-You can click the next button to go to the product specifications and the purchase page:
+Download the latest release by clicking [here](https://github.com/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen/releases/latest).
 
-[![DevCase for .NET Framework](Images/DevCase%20Banner.png)](https://codecanyon.net/item/elektrokit-class-library-for-net/19260282)
+## 🔄 Change Log
 
-Note that any source-code within the namespace 'DevCase' included in this **GitHub** repository, was freely extracted and distributed from the commercial library '**DevCase for .NET Framework**'.
+Explore the complete list of changes, bug fixes, and improvements across different releases by clicking [here](/Docs/CHANGELOG.md).
 
-<u>**Thanks in advance for your consideration!**</u> :thumbsup:
+## ⚠️ Disclaimer:
+
+This Work (the repository and the content provided in) is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the Work or the use or other dealings in the Work.
+
+## 💪 Contributing
+
+Your contribution is highly appreciated!. If you have any ideas, suggestions, or encounter issues, feel free to open an issue by clicking [here](https://github.com/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen/issues/new/choose). 
+
+Your input helps make this Work better for everyone. Thank you for your support! 🚀
+
+## 💰 Beyond Contribution 
+
+This work is distributed for educational purposes and without any profit motive. However, if you find value in my efforts and wish to support and motivate my ongoing work, you may consider contributing financially through the following options:
+
+ - ### Paypal:
+    You can donate any amount you like via **Paypal** by clicking on this button:
+
+    [![Donation Account](Images/Paypal_Donate.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E4RQEV6YF5NZY)
+
+ - ### Envato Market:
+   If you are a .NET developer, you may want to explore '**DevCase Class Library for .NET**', a huge set of APIs that I have on sale.
+   Almost all reusable code that you can find across my works is condensed, refined and provided through DevCase Class Library.
+
+    Check out the product:
+    
+   [![DevCase Class Library for .NET](Images/DevCase_Banner.png)](https://codecanyon.net/item/elektrokit-class-library-for-net/19260282)
+
+<u>**Your support means the world to me! Thank you for considering it!**</u> 👍
