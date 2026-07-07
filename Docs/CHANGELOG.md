@@ -1,4 +1,4 @@
-# MOUSE XY Change Log 📋
+﻿# MOUSE XY Change Log 📋
 
 ## v1.1 *(current)* 🆕
 #### 🌟 Improvements:
