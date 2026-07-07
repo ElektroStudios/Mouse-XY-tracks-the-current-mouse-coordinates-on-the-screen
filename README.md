@@ -80,8 +80,11 @@ The motivation behind this project was simply to learn how to program. Back in 2
 ## 🚀 Getting Started
 
 1. Navigate to the **[Releases page](https://github.com/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen/releases/latest)**.
-2. Download the latest `.zip` archive and extract its contents to your preferred directory.
-3. Run the executable file to launch the application.
+2. Download the latest `.zip` archive or the `.exe` setup installer, depending on your preference.
+3. If you downloaded the `.zip` archive, extract its contents to your preferred directory.
+   <br> 
+   If you downloaded the `.exe` file, run it and follow the installation wizard.
+4. Run the executable file to launch the application.
 
 ## 🔄 Change Log
 
