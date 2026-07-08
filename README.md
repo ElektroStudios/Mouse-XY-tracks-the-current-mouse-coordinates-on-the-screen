@@ -51,7 +51,7 @@ winforms
     <a href="https://github.com/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen/commits"><img src="https://img.shields.io/github/last-commit/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen" alt="Last commit"></a>
     <a href="https://github.com/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen/pulls"><img src="https://img.shields.io/github/issues-pr/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen" alt="Pull Requests"></a>
     <a href="https://github.com/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen/issues?q=is%3Aissue+is%3Aopen"><img src="https://img.shields.io/github/issues/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen?color=blue" alt="Open Issues"></a><a href="https://github.com/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen?label=&color=28a745" alt="Closed Issues"></a>
-    <a href="https://github.com/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen/pulse"><img src="https://img.shields.io/badge/maintained-yes-green.svg" alt="Maintenance"></a>
+    <a href="https://github.com/ElektroStudios/Mouse-XY-tracks-the-current-mouse-coordinates-on-the-screen/pulse"><img src="https://img.shields.io/badge/maintained-no-red.svg" alt="Maintenance"></a>
   <br>
   <br>
     <a href="https://en.wikipedia.org/wiki/Spanish_Empire"><img src="https://img.shields.io/badge/Made_in-Spain_%F0%9F%87%AA%F0%9F%87%B8-AA151B?style=flat" alt="Made in Spain"></a>
